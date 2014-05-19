@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script type = "text/javascript" src="js/jquery-1.7.1.min.js">
+ 
+  </script>
+  <script type = "text/javascript">
+	var b = new Array();
+   $(document).ready(function() {
+	//  alert("tesyt");  
+	b.push("A");
+	b.push("B");
+  });
+ 
+function check(){
+	var removeItem = 'A';
+	b = jQuery.grep(b, function(value) {
+	  return value != removeItem;
+	});
+	if(jQuery.inArray( "C", b) !==-1){
+		alert("c***"+b);
+	}else{
+		alert("els"+b);
+	}
+}
+  </script>
+  
+ </HEAD>
+
+ <BODY>
+  <a href = '#' id ='c' onclick = "check()">Hai</a>
+ </BODY>
+</HTML>
