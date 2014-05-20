@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+	
+	
+	
+
+<script type="text/javascript" src="jquery-1.7.1.min"></script>
+	<script type="text/javascript" src="jquery.PrintArea.js_4"></script>
+	<script type="text/javascript">
+	function test(){
+		var container = $("#at").attr('rel');
+		alert("container**"+container);
+		$('#' + container).printArea();
+		return false;		
+}
+	</script>
+</head>
+<body bgcolor="blue">
+<div>Won't be printed</div>
+<div>This gets Printed</div>
+<div  id="print_div">Not printed</div>
+<a href ="#" id= "at" rel="print_div" onclick="test()">Print</a>
+</body>
+</html>

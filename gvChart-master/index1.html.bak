@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<title>
+			jQuery gvChart plugin - Google Visualization Charts via jQuery
+		</title>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="jquery.gvChart-1.1.min.js"></script>
+		<script type="text/javascript">
+		gvChartInit();
+		jQuery(document).ready(function(){
+			
+			
+			
+			
+			jQuery('#myTable3').gvChart({
+				chartType: 'ColumnChart',
+				
+				hideTable:true,
+				gvSettings: {
+				//	animation:{
+				//			duration: 200,
+					//		easing: 'in',
+				//	}, // newly added
+					//animation.easing: ['inAndOut'],
+ 					colors:['blue','#004411'],  //newly added works
+					axisTitlesPosition:['out'],  //newly added works
+					//chartArea.top:80 // newly added
+					vAxis: {title: 'No of Samples'},
+					hAxis: {title: 'Progress', gridlines: {color: '#E9E65F', count: 4}},
+				//	hAxis.gridlines: {color: '#333', count: 4},
+					width: 720,
+					height: 300
+					}
+			});
+			
+			
+			
+		});
+		</script>
+		<style>
+			body{
+				text-align: center;
+				font-family: Arial, sans-serif;
+				font-size: 12px;
+			}
+			
+			a{
+				text-decoration: none;
+				font-weight: bold;
+				color: #555;
+			}
+			
+			a:hover{
+				color: #000;
+			}
+			
+			div.main{
+				margin: auto;
+				text-align: left;
+				width: 720px;
+			}
+		
+			div.clean{
+				border: 1px solid #850000;
+			}
+			
+			.clean td, .clean th{
+				border: 2px solid #bbb;
+				background: #ddd;
+				padding: 5px 10px;
+				text-align: center;
+				border-radius: 2px;
+			}
+			
+			.clean table{
+				margin: auto;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			
+			.clean caption{
+				font-weight: bold;
+				
+			}
+			
+			.gvChart,.clean{
+				border: 2px solid #850000;
+				border-radius: 5px;
+				-moz-border-radius: 10px;
+				width: 720px;
+				
+				margin: auto;
+				margin-top: 20px;
+			}
+			
+			pre{
+				background: #eee;
+				padding: 10px;
+				border-radius: 10px;
+				-moz-border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<h2 id="bar">BarChart</h2>
+			
+			<table id='myTable3'>
+				<caption>Project Tracking</caption>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Project Opened</th>
+						<th>Project Approved</th>
+						<th>Sample Submission</th>
+						<th>Library Preparation</th>
+						<th>Sequencing Queue</th>
+						<th>Sequencing Completed</th>
+						<th>End</th>
+						
+					</tr>
+				</thead>
+					<tbody>
+					<tr>
+						<th>Flow</th>
+						<td>200</td>
+						<th>Flow1</th>
+						<td>250</td>
+						<td>300</td>
+						<td>350</td>
+						<td>400</td>
+						<td>450</td>
+						<td>500</td>		
+						
+					</tr>
+					
+				</tbody>
+			</table>				
+		</div>
+	</body>
+</html>
+

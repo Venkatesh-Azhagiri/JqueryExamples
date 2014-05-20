@@ -1,0 +1,212 @@
+html, body{
+  font-family: chaparral-pro, serif;
+}
+body{ padding-bottom: 50px; }
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "proxima-nova-alt-condensed", Helvetica, Arial, sans-serif;
+  color: #333;
+  font-weight: 700;
+  line-height: 1.3;
+}
+h1{
+  margin: 50px 0 40px 0;
+}
+
+p, ul, li, div{
+  font-size: 22px;
+  color: #444;
+}
+p, ul, li{
+  line-height: 1.6em;
+  /*text-align: justify;*/
+}
+p, ul{
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
+
+p.pause{
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+}
+p.thanks{
+  color: #8f8f8f;
+  font-size: 19px;
+  font-style: italic;
+}
+
+.fancy-and{
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.wrapper{
+  width: 600px;
+  padding: 0px 0px;
+  margin: 0 auto;
+}
+.wrapper img{
+  width: 100%;
+}
+
+/* Nav/Heading */
+
+#mark-wrapper{
+  border-bottom: 1px solid #ededed;
+  padding: 20px 0;
+  height: 50px;
+}
+a#mark{
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 47px;
+  line-height: 47px;
+  overflow: hidden;
+  color: #000;
+  text-align: left;
+  text-decoration: none;
+
+  -webkit-transition: width .2s ease-in-out;
+  -moz-transition: width .2s ease-in-out;
+  -o-transition: width .2s ease-in-out;
+  transition: width .2s ease-in-out;
+}
+a#mark:hover{
+  width: 130px;
+}
+
+a#mark span{
+  padding-left: 10px;
+}
+
+a#mark img{
+  float: left;
+  width: 40px;
+  opacity: .2;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+a#mark:hover img{
+  opacity: 1;
+}
+
+/* Index */
+
+#index.wrapper{
+  width: 500px;
+}
+
+/* POSTS */
+
+#post { position: relative; }
+#index a, #post a, #dsq-account-dropdown a, .about-block a {
+  color: #000;
+  text-decoration: none;
+  background: #f7fa85;
+  padding: 1px 4px;
+  -moz-border-radius: 3px;
+}
+#post a:hover,
+#index a:hover,
+#dsq-account-dropdown a:hover {
+  text-decoration: underline;
+}
+
+#post .date {
+  color: #CCCCCC;
+  font-size: 14px;
+  left: -170px;
+  line-height: 32px;
+  position: absolute;
+  text-align: right;
+  width: 150px;
+}
+
+.about-block{
+  position: relative;
+  text-align: center;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  font-size: 19px;
+  color: #8f8f8f;
+  margin: 50px auto 50px auto;
+  padding: 30px 0 30px 0;
+  width: 760px;
+}
+.about-block img{
+  position: absolute;
+  top: 50%;
+  left: -23px;
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 80px;
+}
+
+.twitter-wrapper{
+  text-align: center;
+}
+.twitter-share-button{
+  position: absolute;
+  right: -115px;
+  bottom: 10px;
+}
+
+#comments{ padding: 1px 0; position: relative; }
+
+#dsq-footer{ display: none; }
+
+@media screen and (max-width: 760px) {
+  #post .date{
+    left: 0;
+    right: auto;
+    text-align: left;
+    width: auto;
+    top: -47px;
+  }
+  #post .posts .date{
+    position: static;
+  }
+  .about-block{
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about-block img {
+    /* NO FACE FOR THE MOBILE USERS. NOPE. */
+    display: none;
+  }
+
+  .twitter-share-button{
+    right: 0; bottom: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper, #index.wrapper{
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .twitter-share-button{
+    position: static;
+  }
+  .twitter-wrapper{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1{ font-size: 1.5em; }
+  h2{ font-size: 1.3em; }
+  h3{ font-size: 1.1em; }
+
+  p, ul, li, div{
+    font-size: 20px;
+  }
+}
+

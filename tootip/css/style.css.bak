@@ -1,0 +1,45 @@
+		#fixedtipdiv {
+	position: absolute;
+	padding: 5px;
+	font: normal 12px Verdana;
+	line-height: 18px;
+	z-index: 100;
+	font-size: 11px;
+}
+
+#fixedtipdiv ul {
+	padding-left: 30px;
+	background: url(/img/tooltip_bg.png) no-repeat left top;
+	height: 184px;
+	padding-top: 7px
+}
+
+#fixedtipdiv ul.rgt {
+	padding-right: 30px;
+	background: url(/img/tooltip_bg_R.png) no-repeat left top;
+	height: 184px;
+	padding-left: 10px
+}
+
+#fixedtipdiv li {
+	color: #666;
+	padding: 0px;
+	line-height: 13px;
+}
+
+#fixedtipdiv li.padbot08 {
+	padding-bottom: 4px
+}
+
+#fixedtipdiv li span {
+	color: #000
+}
+
+#fixedtipdiv a {
+	color: #000099
+}
+
+#fixedtipdiv a:hover {
+	color: #000099;
+	text-decoration: underline
+}

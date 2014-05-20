@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<title>
+			jQuery gvChart plugin - Google Visualization Charts via jQuery
+		</title>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="jquery.gvChart-1.1.min.js"></script>
+		<script type="text/javascript">
+		gvChartInit();
+		jQuery(document).ready(function(){
+			alert("hai");
+			
+			
+			
+			jQuery('#myTable3').gvChart({
+				chartType: 'BarChart',
+				gvSettings: {
+					vAxis: {title: 'No of players'},
+					hAxis: {title: 'Month'},
+					width: 720,
+					height: 300
+					}
+			});
+			
+			
+			
+		});
+		</script>
+		<style>
+			body{
+				text-align: center;
+				font-family: Arial, sans-serif;
+				font-size: 12px;
+			}
+			
+			a{
+				text-decoration: none;
+				font-weight: bold;
+				color: #555;
+			}
+			
+			a:hover{
+				color: #000;
+			}
+			
+			div.main{
+				margin: auto;
+				text-align: left;
+				width: 720px;
+			}
+		
+			div.clean{
+				border: 1px solid #850000;
+			}
+			
+			.clean td, .clean th{
+				border: 2px solid #bbb;
+				background: #ddd;
+				padding: 5px 10px;
+				text-align: center;
+				border-radius: 2px;
+			}
+			
+			.clean table{
+				margin: auto;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			
+			.clean caption{
+				font-weight: bold;
+				
+			}
+			
+			.gvChart,.clean{
+				border: 2px solid #850000;
+				border-radius: 5px;
+				-moz-border-radius: 10px;
+				width: 720px;
+				
+				margin: auto;
+				margin-top: 20px;
+			}
+			
+			pre{
+				background: #eee;
+				padding: 10px;
+				border-radius: 10px;
+				-moz-border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<h2 id="bar">BarChart</h2>
+			
+			<table id='myTable3'>
+				<caption>Game players count</caption>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Jan</th>
+						<th>Feb</th>
+						<th>Mar</th>
+						<th>Apr</th>
+						<th>May</th>
+						<th>Jun</th>
+						<th>Jul</th>
+						<th>Aug</th>
+						<th>Sep</th>
+						<th>Oct</th>
+						<th>Nov</th>
+						<th>Dec</th>
+					</tr>
+				</thead>
+					<tbody>
+					<tr>
+						<th>2010</th>
+						<td>125</td>
+						<td>185</td>
+						<td>327</td>
+						<td>359</td>
+						<td>376</td>
+						<td>398</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<th>2009</th>
+						<td>1167</td>
+						<td>1110</td>
+						<td>691</td>
+						<td>165</td>
+						<td>135</td>
+						<td>157</td>
+						<td>139</td>
+						<td>136</td>
+						<td>938</td>
+						<td>1120</td>
+						<td>55</td>
+						<td>55</td>
+					</tr>
+				</tbody>
+			</table>
+
+					<h2>Credits</h2>
+			<p>Special thanks to <a href="http://yuijim.blogspot.com">Urszula Ciaputa</a> for her help in creating this plugin.</p>
+		</div>
+	</body>
+</html>
+

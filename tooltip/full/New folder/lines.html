@@ -1,0 +1,108 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+    <link href="lines_files/bootstrap.css" rel="stylesheet">
+    <link href="lines_files/bootstrap-responsive.css" rel="stylesheet">
+	<link href="lines_files/layout.css" rel="stylesheet">
+	<link href="lines_files/style.css" rel="stylesheet">
+	<link href="lines_files/style_002.css" rel="stylesheet">
+	<script type="text/javascript" src="lines_files/jquery.js"></script>
+	<script type="text/javascript" src="lines_files/rsv.js"></script>
+	<script type="text/javascript">
+	function getFusionInfo() {
+		$.ajax(
+			       {
+			       type: "POST",
+				   url: "/MutationViewer/ServiceHandler",
+				   data: {action        : 'getfusion',
+					   geneId : 27436,
+					   position : '< 7'
+					   
+				   }})
+	.done(function(data1)  {
+		   			var fusionData1 = eval(data1);
+		   			$.ajax(
+		 			       {
+		 			       type: "POST",
+		 				   url: "/MutationViewer/ServiceHandler",
+		 				   data: {action        : 'getfusion',
+		 					   geneId : 238,
+		 					   position : '> 19'
+		 					   
+		 				   }})
+		 	.done(function(data2)  {
+		 		var fusionData2 = eval(data2);
+		 	
+		   			var canvas = document.getElementById('myCanvas');
+		   			var x = 100;
+		   			var y = 50;
+		   			for (i=0; i<data1.length; i++)
+					{
+		   			
+		   			  
+		   		      var context = canvas.getContext('2d');
+		   		      
+		   		      context.beginPath();
+		   		      context.moveTo(x, y);
+		   		      x = x + data1[i].exonLength;
+		   		      //alert(x);
+		   		      context.lineTo(x, y);
+		   		      context.lineWidth = 25;
+		   		      context.strokeStyle = '#ff0000';
+		   		      context.stroke();
+		   		      context.font = '10pt Calibri';
+		   		      context.fillStyle = 'blue';
+		   		      context.fillText(data1[i].exonName, x-(data1[i].exonLength/2), y+50);
+		   		   	  context.stroke();
+		   		   	  x = x +2;	   			
+		   		      
+		   		  }
+		   			  context.fillStyle = 'black';
+		   		      context.fillText('EML4', x/2, y-30);
+		   		   	  context.stroke();
+		   			for (j=0; j<data2.length; j++)
+					{
+		   			
+		   			  
+		   		      var context = canvas.getContext('2d');
+		   		      
+		   		      context.beginPath();
+		   		      context.moveTo(x, y);
+		   		      x = x + data2[j].exonLength;
+		   		      //alert(x);
+		   		      context.lineTo(x, y);
+		   		      context.lineWidth = 25;
+		   		      context.strokeStyle = '#00ff00';
+		   		      context.stroke();
+		   		      context.font = '10pt Calibri';
+		   		      context.fillStyle = 'blue';
+		   		      context.fillText(data2[j].exonName, x-(data2[j].exonLength/2), y+50);
+		   		   	  context.stroke();
+		   		   	  x = x +2;	   		
+		   		     
+		   		  }
+		   		 context.fillStyle = 'black';
+	   		      context.fillText('ALK', x/2, y-30);
+	   		   	  context.stroke();
+			
+	  });
+	});
+	}
+	$(document).ready(function() {
+		
+		
+		getFusionInfo();
+	});
+	</script>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1200" height="200"></canvas>
+    <script type="text/javascript" src="lines_files/canvasjs.js"></script>
+    
+  
+</body></html>

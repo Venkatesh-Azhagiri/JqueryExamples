@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script type = "text/javascript" src="js/jquery-1.3.2.min.js">
+  </script>
+  <script type = "text/javascript" src="js/jquery.qtip-1.0.0-rc3.js">
+  </script>
+  <script type = "text/javascript" src="js/jquery.qtip-1.0.0-rc3.min.js">
+  </script>
+  <script type="text/javascript">
+// Define corners and opposites arrays
+var corners = ['topLeft'];
+var opposites = ['topLeft'];
+var i = 0;
+
+// Create the tooltips only on document load
+$(document).ready(function() 
+{
+   $('#content a')
+      .click(function()
+      {		
+         // If counter reaches maximum, reset
+         if(i === corners.length) i = 0;
+         
+         // Destroy currrent tooltip if present
+         if($(this).data("qtip")) $(this).qtip("destroy");
+         
+         $(this).html(opposites[i]) // Set the links HTML to the current opposite corner
+            .qtip({
+               content: corners[i], // Set the tooltip content to the current corner
+               position: {
+                  corner: {
+                     tooltip: corners[i], // Use the corner...
+                     target: opposites[i] // ...and opposite corner
+                  }
+               },
+               show: {
+                  when: false, // Don't specify a show event
+                  ready: true // Show the tooltip when ready
+               },
+               hide: false, // Don't specify a hide event
+               style: {
+                  border: {
+                     width: 5,
+                     radius: 10
+                  },
+                  padding: 10, 
+                  textAlign: 'center',
+                  tip: true, // Give it a speech bubble tip with automatic corner detection
+                  name: 'cream' // Style it according to the preset 'cream' style
+               }
+            });
+         
+         i++; // Increase the counter
+      });
+});
+</script>
+ </HEAD>
+
+ <BODY>
+  <div class="title" id="content">
+<div style="text-align: center" class="center">
+   <a href="#">Click me to cycle through the different corner options</a>
+</div>
+</div>
+ </BODY>
+</HTML>

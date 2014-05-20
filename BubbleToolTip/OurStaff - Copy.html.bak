@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NGS :: Contact Us</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script>	
+<script src="js/jQuery.bubbletip-1.0.6.js" type="text/javascript"></script>
+<link href="js/bubbletip/bubbletip.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function check(a,t){
+var anchorId = a;
+var divId = t;
+//alert("s**"+id+"**j**"+divId);
+
+$('#'+anchorId+'_right').bubbletip($('#'+divId+'_right'), { deltaDirection: 'right' });
+$('#'+anchorId+'_trigger').bubbletip($('#'+divId+'_trigger1'), { positionAtElement: $('#'+anchorId+'_target') });
+$('#a_unbind').bubbletip($('#'+divId+'_trigger2_unbind'));
+$('#a_unbind').bind('click', function(event) {
+$('#'+anchorId+'_trigger').removeBubbletip($('#'+divId+'_trigger2'));
+event.preventDefault();
+});
+$('#a_bind').bubbletip($('#'+divId+'_trigger2_bind'));
+$('#a_bind').bind('click', function(event) {
+$('#'+anchorId+'_trigger').bubbletip($('#'+divId+'_trigger2'), {
+positionAtElement: $('#'+anchorId+'_target'),
+deltaDirection: 'down',
+delayShow: 500,
+delayHide: 1000
+});
+event.preventDefault();
+});
+}
+</script>
+
+</head>
+<body>
+<table width="44" border="0">
+<tr>
+<td valign="middle" align="center">
+<div id="tip1_right" style="display:none;font:normal 12px Arial, Helvetica, sans-serif;color:#000">
+<span style="color:#1da2e7">Dr. Y</span><br /><span style="color:#8D8D8D">Designation<br/><a href="mailto:a@gmail.com" style="color:#8D8D8D">a@gmail.com</a></span>
+</div>
+<a id="a1_right">
+<img src="images/Approved.jpg"  onmouseover="check('a1','tip1')" width="44" height="35" />
+</a>        
+</td>
+</tr>
+</table>
+</body>
+</html>

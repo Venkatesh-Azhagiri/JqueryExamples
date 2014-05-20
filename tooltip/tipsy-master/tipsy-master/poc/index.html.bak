@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script type = "text/javascript" src = "js/jquery-1.4.2.min.js">
+  </script>
+  <script type = "text/javascript" src = "js/jquery.tipsy.js">
+  </script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+   $('a.live-tipsy').tipsy({live: true});
+   $('#manual-example a[rel=tipsy]').tipsy({trigger: 'manual'});
+   });
+</script>
+ </HEAD>
+
+ <BODY>
+	<p id='manual-example'>
+  <a rel='tipsy' title='Well hello there'>My tooltip is manually triggered</a>
+  <a href='#' onclick='$("#manual-example a[rel=tipsy]").tipsy("show"); return false;'>Show</a>
+  <a href='#' onclick='$("#manual-example a[rel=tipsy]").tipsy("hide"); return false;'>Hide</a>
+</p>
+
+
+  
+ </BODY>
+</HTML>

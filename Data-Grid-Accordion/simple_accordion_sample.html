@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Simple Accordion Example</title>
+<link href="css/styles.css" rel="stylesheet" media="screen"  />
+<script type="text/javascript" src="js/jquery.js" ></script>
+<script  type="text/javascript" language="javascript">
+	$(document).ready(function(){
+    $('.adCntnr div.acco2:eq(0)').find('div.expand:eq(0)').addClass('openAd').end()
+    .find('div.collapse:gt(0)').hide().end()
+    .find('div.expand').click(function() {
+        $(this).toggleClass('openAd').siblings().removeClass('openAd').end()
+        .next('div.collapse').slideToggle().siblings('div.collapse:visible').slideUp();
+        return false;
+    });
+})
+</script>
+
+</head>
+
+<body>
+<div style="width:996px; margin:0 auto;">
+<div class="adCntnr" >
+<div class="acco2">
+<div class="expand"><a title="expand/collapse" href="#" style="display: block;">Title for the First Heading</a></div>
+<div class="collapse">
+<div class="accCntnt">
+    <div class="titlebarLeftc" style="height:25px; border-bottom:1px solid #dadada;width:700px"">
+    <div class="titlebarRightc" style="height:25px; width:700px">
+    <div class="titlebar" style="height:25px;">
+        <table class="dataGridHdr" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+        <td class="dataGridHdr_boder">Date/Time</td>
+        <td width="354px" class="dataGridHdr_boder2" >Activity</td>
+        <td width="121px" class="dataGridHdr_boder3">ActionBy</td>
+        </tr>
+        </table>
+    </div>
+    </div>
+	</div>
+    <div class="dataGrid_container" style="width:698px">
+            <table class="dataGrid" width="100%" cellpadding="0" cellspacing="0">
+            <tr class="dataAlterRw1">
+            <td class="dataGridHdr_boder">10-JAN-2013 11:00AM</td>
+            <td class="dataGridHdr_boder" style="padding:0 7px;">Project Created</td>
+            <td class="dataGridHdr_boder3" >Jermey Stinson</td>	
+            </tr>
+            <tr class="dataAlterRw2">
+            <td class="dataGridHdr_boder">12-JAN-2013 10:30AM</td>
+            <td class="dataGridHdr_boder" style="padding:0 7px;">Approved</td>
+            <td class="dataGridHdr_boder3">Bernar Chow</td>	
+            </tr>
+            <tr class="dataAlterRw1">
+            <td class="dataGridHdr_boder">13-JAN-2013 02:00PM</td>
+            <td class="dataGridHdr_boder" style="padding:0 7px;">Samples Submitted Batch#25 (30 Samples)</td>
+            <td class="dataGridHdr_boder3">Catherine Foo</td>	
+            </tr>
+            <tr class="dataAlterRw2">
+            <td class="dataGridHdr_boder" >14-JAN-2013 11:20AM</td>
+            <td class="dataGridHdr_boder" style="padding:0 7px;">Samples Approved</td>
+            <td class="dataGridHdr_boder3">Zora Modrusan</td>	
+            </tr>
+            <tr class="dataAlterRw2">
+            <td class="dataGridHdr_boder" >15-JAN-2013 03:00PM</td>
+            <td class="dataGridHdr_boder" style="padding:0 7px;">Library Preparation</td>
+            <td class="dataGridHdr_boder3">Somasekar</td>
+            </tr>
+            <tr class="dataAlterRw2">
+            <td class="dataGridHdr_boder" >16-JAN-2013 10:30AM</td>
+            <td class="dataGridHdr_boder" style="padding:0 7px;">Sequencing In Progress</td>
+            <td class="dataGridHdr_boder3">Catherine Foo</td>
+            </tr>
+            </table>
+    </div>
+</div>
+</div>
+</div>  
+</div>
+</div>
+</body>
+</html>

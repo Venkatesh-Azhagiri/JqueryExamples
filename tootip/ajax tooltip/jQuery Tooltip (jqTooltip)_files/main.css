@@ -1,0 +1,25 @@
+*{margin:0;padding:0;}
+html,body{color: #000;background-color:#fff;}
+body{font:75%/1.5em Arial, Geneva, sans-serif;text-shadow:#000 0px 0px 0px;}
+h1,h2{font:bold 1.5em Arial, Geneva, sans-serif;color:#000;margin-bottom:15px;display: block;}
+h3{font-size:1.3em;margin-bottom:15px;font-weight:normal;font-style:normal;display:block;}
+p{margin-bottom:15px;}
+table th{min-width:100px;background-color:#000;color:#fff;}
+#container{width:950px;margin:0 auto;padding-top:30px;padding-left:50px;padding-right:10px;}
+#header{padding-bottom:20px;}
+#header h1{font:bold 3em Arial, Geneva, sans-serif;}
+#header a{color:#000;text-decoration:none;}
+/* sidebar */
+#sidebar{width:250px;float:left;padding-bottom:55px;}
+#sidebar ul#navigation{font:bold 1.5em Arial, Geneva, sans-serif;list-style-type: none;}
+#sidebar ul#navigation li a{color:#7d7d7d;text-decoration:none;}
+#sidebar ul#navigation li a.current{color:#000;}
+#sidebar ul#navigation li a:hover{color:#000;}
+/* main */
+#main{width:575px;float:left;padding-bottom:50px;min-height:400px;}
+#main a{color:#000;}
+#main ul{margin-left:20px;}
+/* footer */
+#footer{color:#858788;border-top:1px solid #242729;font:0.8em Arial, Geneva, sans-serif;
+clear:both;padding:5px 0 10px 0;width:900px;background:url('/static/images/appengine-noborder-120x30.gif') no-repeat;}
+#footer p{padding-left:250px;}

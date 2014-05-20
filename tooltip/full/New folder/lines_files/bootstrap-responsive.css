@@ -1,0 +1,185 @@
+/*!
+ * Bootstrap Responsive v2.1.0
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible-phone {
+  display: none !important;
+}
+
+.visible-tablet {
+  display: none !important;
+}
+
+.hidden-desktop {
+  display: none !important;
+}
+
+.visible-desktop {
+  display: inherit !important;
+}
+
+@media only screen and (max-width : 768px) {
+  .login_container .form-horizontal .controls{
+  	margin-left:0px!important;
+  }
+  .hidden-desktop {
+    display: inherit !important;
+  }
+  .visible-desktop {
+    display: none !important;
+  }
+  .visible-phone {
+    display: inherit !important;
+  }
+  .hidden-phone {
+    display: none !important;
+  }
+  .nav-collapse {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  .page-header h1 small {
+    display: block;
+    line-height: 20px;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    border: 1px solid #ccc;
+  }
+  .form-horizontal .control-group > label {
+    float: none;
+    width: auto;
+    padding-top: 0;
+    text-align: left;
+  }
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  .form-horizontal .control-list {
+    padding-top: 0;
+  }
+  .form-horizontal .form-actions {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .modal {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  .modal-header .close {
+    padding: 10px;
+    margin: -10px;
+  }
+  .carousel-caption {
+    position: static;
+  }
+  .search_container{
+  	left:20%!important;
+  }
+  .search_container1{
+  	margin-left:20%!important;
+  }
+  .btn-group{
+  	white-space:normal;
+  }
+  .login_container input{
+  	width:90%;
+  }
+  .listing_details .row-fluid{
+  	border-bottom:1px solid #eee;
+	margin-bottom:5px;
+  }
+  .listing_details .row-fluid > div{
+  	width:90%!important;
+	min-height:25px!important;
+	font-weight:bold;
+  }
+  .listing_details .row-fluid > div + div{
+  	width:90%!important;
+	min-height:25px!important;
+	font-weight:normal;
+	margin-left:10px!important;
+  }
+  .pagination{
+  	margin-left:10%;
+	margin-bottom:50px;
+  }
+  .rgt_nav .btn-group .btn{
+  	padding:4px 7px;
+  }
+  .f_announce li.first{
+  	padding-left:10px!important;
+  }
+  .login_name{
+  	padding-left:5px;
+  }
+  .login_name > .btn:first-child{
+  	display:none;
+  }
+  .power_by{
+  	text-indent:-9999px;
+	width:40px;
+	padding:0!important;
+	background-position:center top!important;
+  }
+  .box_container{
+  	width:100% !important;
+  }
+  .navbar-inner .nav{
+  	margin-left:10px!important;
+  }
+}
+
+@media only screen and (min-width : 980px) {
+	.row-fluid .span6{
+		width: 31.914893617021278%;
+  		*width: 31.861702127659576%;
+	}
+	.row-fluid .span6 + .span6{
+		width: 65.95744680851064%;
+  		*width: 65.90425531914893%;
+	}
+}

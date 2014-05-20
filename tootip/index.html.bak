@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script type  = "text/javascript" src = "js/jquery-1.4.4.min.js">
+	</script>
+  <script type = "text/javascript">
+function fixedtooltip(sampleBatchNo, projectId) {
+//		var dropmenuobj = document.getElementById("fixedtipdiv");
+		//document.getElementById("tooltipHide").checked == true;
+		 
+
+		//clearhidetip();
+		//dropmenuobj=document.getElementById? document.getElementById("fixedtipdiv") : fixedtipdiv;
+		
+		var toolTipContent = '<ul><li>SAM ID: <span></span></li></ul>';
+		var dropmenuobj = document.getElementById("fixedtipdiv");
+//		alert("dropmenuobj***"+dropmenuobj);
+		dropmenuobj.innerHTML = toolTipContent;
+		//showhide(dropmenuobj.style, e, "visible", "hidden", tipwidth);
+		dropmenuobj.x = getposOffset(obj, "left");
+		dropmenuobj.y = getposOffset(obj, "top");
+		if (dropmenuobj.x > 705) {
+			dropmenuobj.x = dropmenuobj.x - 270;
+			$("#fixedtipdiv ul").addClass(
+			"rgt");
+			
+		}
+		dropmenuobj.style.left = dropmenuobj.x
+				- clearbrowseredge(obj, "rightedge") + 250 + "px";
+		dropmenuobj.style.top = dropmenuobj.y
+				- clearbrowseredge(obj, "bottomedge") + obj.offsetHeight + 170
+				+ "px";
+		
+		//dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px";
+		//dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px";
+	}
+	function delayhidetip() {
+		delayhide = setTimeout("hidetip()", 50000);
+	}
+  </script>
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+ </HEAD>
+
+ <BODY style = "background-color:#b0c4de;">
+ <div id="fixedtipdiv" style="visibilty:hidden;width: 150px;"></div>
+
+ <div onMouseover= "fixedtooltip(1,2)" onMouseOut="delayhidetip()">
+	test
+ </div>
+
+ </BODY>
+</HTML>

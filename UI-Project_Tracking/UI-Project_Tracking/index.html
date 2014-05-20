@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
+<style type="text/css">
+
+*    								{margin:0px; padding:0px;}
+body 								{font:12px Arial,Helvetica, sans-serif; color:#000000; background-color:#f8f8f8}
+.tracking_Report					{width:920px; margin-left:auto; margin-right:auto;  background-color:#FFF; border:1px solid #ededed; height:240px;}
+.tracking_Report .container 		{width:900px; margin-left:auto; margin-right:auto; padding-top:10px; padding-left:7px;}
+
+.container .row0 {clear:both;}
+.row0 .col_0_1	 					{ width:445px;  float:left; text-align:left;																											}
+.col_0_1_1					   		{ width:285px;  float:left; text-align:left; color:#195695; height:15px;																				}
+.col_0_1_1	img				   		{ padding:1px;  float:left;																																}
+.row0 .col_0_2 						{ width:445px;  float:left; text-align:right;																											}
+.row0 .col_0_2_1					{ width:358px;  float:left; text-align:right; 	color:#195695;																							}
+.row0 .col_0_2_2					{ width:80px;   float:right; text-align:right; 																											}
+.row0 .col_0_2_2 .col_0_2_2_1		{ width:80px;   float: left; text-align:left;  border:1px solid #C9C9C9;color:#000; height:15px;														}
+.col_0_2_2_1 img					{ padding:1px;  float:left;																																}
+/*
+.row0 .col_0_2 .col_0_2_1	   		{ width:80px;   padding:0px 5px ; float: right; text-align:left; border:1px solid #C9C9C9; color:#000; height:15px;									}
+.col_0_2_1	img						{ padding:1px;  float:left;}
+*/
+.container .row1 {clear:both;}
+.row1 .col_1_1, .row1 .col_1_2 		{ width:60px;  padding:5px 0   5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#5c5a29; color:#FFF;					}
+.row1 .col_1_3 				   		{ width:120px; padding:5px 0   5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#5c5a29; color:#FFF;					}
+.row1 .col_1_5 				   		{ width:300px; padding:5px 0   5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#5c5a29; color:#FFF;					}
+.row1 .col_1_4, .col_1_6 	   		{ width:170px; padding:5px 1px 5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#5c5a29; color:#FFF;					}
+
+.container .row2 {clear: both;}
+.row2 .col_2_1, .row2 .col_2_2 		{ width:60px;  padding:5px 0 	 5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#F8F8F8; color:#000; height:15px; 	}
+.row2 .col_2_3 				   		{ width:120px; padding:5px 0 	 5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#F8F8F8; color:#000; height:15px;	}
+.row2 .col_2_5 				   		{ width:300px; padding:5px 0 	 5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#F8F8F8; color:#000; height:15px; 	}
+.row2 .col_2_5 .col_2_5_1	   		{ width:85px;  padding:0px 0 	 0px 0; float: left; text-align:center;   border:1px solid #C9C9C9; background-color:#FFFFFF; color:#000; height:15px;	}
+.col_2_5_1	img				   		{ padding:1px; float	:left;}
+.row2 .col_2_5 .col_2_5_2	   		{ width:210px; padding:0px 0 	 0px 0; float: left; text-align:right;  border:0px solid #efefef; background-color:#F8F8F8; color:#000; height:15px; 	}
+.row2 .col_2_4, .col_2_6 	   		{ width:170px; padding:5px 1px 5px 0; float: left; text-align:right;  border:1px solid #efefef; background-color:#F8F8F8; color:#000; height:15px;		}
+.row2 .col_2_6 .col_2_6_1	   		{ width:80px;  padding:0px 0 	 0px 0; float: left; text-align:left;   border:1px solid #C9C9C9; background-color:#FFFFFF; color:#000; height:15px;	}
+.col_2_6_1	img						{ padding:1px; float	:left;}
+
+.container .row3 {clear:both;}
+.row3 .col_3_1, .row3 .col_3_2 		{ width:60px;  padding:5px 0 	 5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#FFFFFF; color:#000; height:135px;	}
+.row3 .col_3_3 				   		{ width:120px; padding:5px 0 	 5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#FFFFFF; color:#000; height:135px; 	}
+.row3 .col_3_5 				   		{ width:300px; padding:5px 0	 5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#FFFFFF; color:#000; height:135px;	}
+.row3 .col_3_4, .col_3_6 	   		{ width:170px; padding:5px 1px 5px 0; float: left; text-align:center; border:1px solid #efefef; background-color:#FFFFFF; color:#000; height:135px; 	}
+
+.clear_float 						{ font-size:0px; line-height:0px; clear:both; 																											}
+
+/* GREEN PROGRESS BAR */
+.Green_Progress_Bar 				{ float:left; clear:both; width:100%; height:40px; position:relative; padding-top:50px; 																}
+.Green_Progress_Bar .percent 		{ background-image:url(images/green-Progress-Talling.jpg); float:left; width:100%; height:24px; position:relative;										}
+.Green_Progress_Bar .percent span 	{ display:block; position:absolute; top:0; right:0; z-index:2; width:100%; height:24px; background-image:url(images/Gray-Progress-Talling.jpg); 		}
+.Green_Progress_Bar .circle 		{ display:block; position:absolute; top:85%; left:0; z-index:3; margin:-40px 0 0 -2px; width:50px; height:50px; line-height:50px; text-align:center;
+									  font:bold 12px 'PT Sans Narrow', sans-serif; color:#fff; background:rgba(0, 0, 0, .0); -moz-border-radius:40px; -webkit-border-radius:40px; border-radius:40px;
+									  -webkit-transition:all 1s ease; -moz-transition:all 1s ease; -o-transition:all 1s ease; 
+									}
+.Green_Progress_Bar .circle.rotate	{ -webkit-transform:rotate(1080deg); -moz-transform:rotate(1080deg); -o-transform:rotate(1080deg); }
+.Green_Progress_Bar .circle span 	{ display:inline-block; width:50px; height:50px; line-height:50px; background:rgba(0, 0, 0, .3); -moz-border-radius:35px; -webkit-border-radius:35px; border-radius:35px; }
+
+/* ORANGE PROGRESS BAR */
+.Orange_Progress_Bar 				{ float:left; clear:both; width:100%; height:40px; position:relative; padding-top:50px; }
+.Orange_Progress_Bar .percent 		{ background-image:url(images/orange-Progress-Talling.jpg); float:left; width:100%; height:24px; position:relative; }
+.Orange_Progress_Bar .percent span 	{ display:block; position:absolute; top:0; right:0; z-index:2; width:100%; height:24px; background-image:url(images/Gray-Progress-Talling.jpg); }
+.Orange_Progress_Bar .circle 		{ display:block; position:absolute; top:85%; left:0; z-index:3; margin:-40px 0 0 -2px; width:50px; height:50px; line-height:50px; text-align:center;
+									  font:bold 12px 'PT Sans Narrow', sans-serif; color:#fff; background:rgba(0, 0, 0, .0); -moz-border-radius:40px; -webkit-border-radius:40px; border-radius:40px;
+									  -webkit-transition:all 1s ease; -moz-transition:all 1s ease; -o-transition:all 1s ease; 
+									}
+.Orange_Progress_Bar .circle.rotate	{ -webkit-transform:rotate(1080deg); -moz-transform:rotate(1080deg); -o-transform:rotate(1080deg); }
+.Orange_Progress_Bar .circle span 	{ display:inline-block; width:50px; height:50px; line-height:50px; background:rgba(0, 0, 0, .3); -moz-border-radius:35px; -webkit-border-radius:35px; border-radius:35px; }
+
+/* TEXTBOX */
+.text 								{ position:absolute; bottom:0; left:50%; width:170px; margin-left:-85px;}
+.text .input 						{ width:140px; padding:15px; border:1px solid #ddd; text-align:center; font-size:20px; font-family:'PT Sans Narrow', sans-serif; }
+.text small 						{ display:block; text-align:center; margin-top:15px; font-size:11px; } 
+a 									{ color:#eee; } 
+</style>
+</head>
+
+<body>
+
+<br /><br /><br /><br />
+<div class="tracking_Report">
+
+	<div class="container">
+    <!--Row 0 Start Here -->
+    <div class="row0">
+    <div class="col_0_1">
+    <div class="col_0_1_1"><strong>Start Date :</strong> 29-Nov-12</div>
+    </div>
+    <div class="col_0_2">
+    <div class="col_0_2_1"><strong>Target Date </strong></div>
+    <div class="col_0_2_2">
+    <div class="col_0_2_2_1">
+    <img src="images/datepicker-icon.jpg" width="13" height="12"/>15-Dec-12
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <!--Row 1 Start Here -->
+    <div class="row1">
+    <div class="col_1_1"><strong>Opened								</strong></div>
+    <div class="col_1_2"><strong>Approved							</strong></div>
+    <div class="col_1_3"><strong>Sample Submission					</strong></div>
+    <div class="col_1_4"><strong>Library Prep						</strong></div>
+    <div class="col_1_5"><strong>Sequencing Run (Data Collection)	</strong></div>
+    <div class="col_1_6"><strong>Data QC							</strong></div>
+    </div>
+    
+    <!--Row 2 Start Here -->
+    <div class="row2">
+    <div class="col_2_1"></div>
+    <div class="col_2_2"></div>
+    <div class="col_2_3"></div>
+    <div class="col_2_4">Sequencing Queue</div>
+    <div class="col_2_5">
+    <div class="col_2_5_1"><img src="images/datepicker-icon.jpg" width="13" height="12"/>15-Dec-12</div>
+    <div class="col_2_5_2">Data QC</div>
+    </div>
+    <div class="col_2_6">
+    <div class="col_2_6_1"><img src="images/datepicker-icon.jpg" width="13" height="12" />15-Dec-12</div>
+    </div>
+    </div>    
+    
+    <!--Row 3 Start Here -->
+    <div class="row3">
+    <div class="col_3_1">
+    <div class="Green_Progress_Bar">
+    <div class="percent"><span style="width: 100%;"></span></div>
+    <div class="circle"><span>0%</span></div>
+    </div>       
+    </div>
+    <div class="col_3_2">
+    <div class="Green_Progress_Bar">
+    <div class="percent"><span style="width: 100%;"></span></div>
+    <div class="circle"><span>0%</span></div>
+    </div>       
+    </div>
+    <div class="col_3_3">
+    <div class="Green_Progress_Bar">
+    <div class="percent"><span style="width: 100%;"></span></div>
+    <div class="circle"><span>0%</span></div>
+    </div>       
+    </div>
+    <div class="col_3_4">
+    <div class="Orange_Progress_Bar">
+    <div class="percent"><span style="width: 100%;"></span></div>
+    <div class="circle"><span>0%</span></div>
+    </div>    
+    </div>
+    <div class="col_3_5">
+    <div class="Orange_Progress_Bar">
+    <div class="percent"><span style="width: 100%;"></span></div>
+    <div class="circle"><span>0%</span></div>
+    </div>
+    </div>
+    <div class="col_3_6">
+    <div class="Orange_Progress_Bar">
+    <div class="percent"><span style="width: 100%;"></span></div>
+    <div class="circle"><span>0%</span></div>
+    </div>
+    </div>    
+	</div>
+</div>
+		<div class="text">
+			<input type="text" class="input" value="0" />
+			<small>Please change a value and hit the enter key.</small>
+		</div>
+
+</body>
+</html> 

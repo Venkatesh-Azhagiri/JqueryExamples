@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0078)http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+     
+    <meta name="google-site-verification" content="YoR_5AGPNCw1u1tvIZWh6hD2pIE1IRL0Hiy9F1suAIA">
+    <title>jQuery Tooltip (jqTooltip)</title> 
+    <link rel="stylesheet" type="text/css" href="./jQuery Tooltip (jqTooltip)_files/main.css"> 
+	<script type="text/javascript" async="" src="./jQuery Tooltip (jqTooltip)_files/ga.js"></script><script type="text/javascript" src="./jQuery Tooltip (jqTooltip)_files/jquery.min.js"></script>
+	
+<script type="text/javascript" src="./jQuery Tooltip (jqTooltip)_files/shCore.js"></script>
+<script type="text/javascript" src="./jQuery Tooltip (jqTooltip)_files/shBrushJScript.js"></script>
+<link type="text/css" rel="stylesheet" href="./jQuery Tooltip (jqTooltip)_files/shCore.css">
+<link type="text/css" rel="stylesheet" href="./jQuery Tooltip (jqTooltip)_files/shThemeDefault.css">
+
+<link type="text/css" rel="stylesheet" href="./jQuery Tooltip (jqTooltip)_files/jquery.tooltip.css">
+<script type="text/javascript" src="./jQuery Tooltip (jqTooltip)_files/jquery.tooltip.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	
+	$("#example1").tooltip({cssClass:"tooltip-red"});
+	
+	$("#example2").tooltip({cssClass:"tooltip-red"});
+	
+	$("#example3").tooltip({cssClass:"tooltip-blue", delay:1000, opacity:50});
+	
+	$("#example4").tooltip({cssClass:"tooltip-red", duration:2000, xOffset:30});
+
+    SyntaxHighlighter.all();
+	
+});
+</script>
+
+</head> 
+ 
+<body id="home"> 
+    <div id="container"> 
+	    <div id="header">
+		    <h1><a id="logo" href="http://hernan.amiune.com/">hernan.amiune</a><a href="http://hernan.amiune.com/labs/">/labs</a></h1>
+		</div>
+        <div id="sidebar"> 
+            <ul id="navigation"> 
+                <li><a href="http://hernan.amiune.com/programming">/programming</a></li> 
+                <li><a href="http://hernan.amiune.com/teaching">/teaching</a></li>
+                <li><a href="http://hernan.amiune.com/labs">/labs</a></li> 
+                <li><a href="http://hernan.amiune.com/blog/">/blog</a></li> 
+                <li><a href="http://hernan.amiune.com/contact">/contact</a></li> 
+            </ul> 
+            <br>
+            <span id="om"></span>
+        </div> 
+        <div id="main">
+        
+
+<h1>jQuery Tooltip (jqTooltip)</h1>
+
+<p>
+The jQuery Tooltip Plugin allows you to easily create tooltips with ajax content.
+</p>
+
+<div id="container-1">
+
+	
+	<p>
+		</p><div>
+		<a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#" id="example1" title="" alt="">Example 1</a>: a simple tooltip.
+		</div>
+		<br>
+		<div>
+		<a href="http://hernan.amiune.com/static/labs/jqtooltip/ajaxcontent.html" id="example2" title="" alt="">Example 2</a>: a simple tooltip with ajax loaded content.
+		</div>
+		<br>
+		<div>
+		<a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#" id="example3" title="" alt="">Example 3</a>: delay:1000, opacity:50.
+		</div>
+		<br>
+		<div style="position:absolute;right:0;">
+		<a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#" id="example4" title="" alt="">Example 4</a>
+		</div>
+	<p></p>
+
+	
+	<h3>Download:</h3>
+	<p>
+	<a href="./jQuery Tooltip (jqTooltip)_files/jquery.tooltip.js">Download js v1.1</a><br>
+	<a href="./jQuery Tooltip (jqTooltip)_files/jquery.tooltip.css">Download css v1.0</a><br>
+	Licensed under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT</a> license.
+	</p>
+	
+	<h3>Code:</h3>
+	<p>
+		This is how you create a new tooltip:<br>
+		</p><div id="highlighter_107806" class="syntaxhighlighter "><div class="bar      "><div class="toolbar"><a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><code class="number">1.</code><span class="content"><span class="block" style="margin-left: 0px !important;"><code class="plain">$(</code><code class="string">"#example1"</code><code class="plain">).tooltip({cssClass:</code><code class="string">"tooltip-red"</code><code class="plain">});</code></span></span></div></div></div>
+		API
+		<br>
+		<div id="highlighter_796921" class="syntaxhighlighter "><div class="bar                    "><div class="toolbar"><a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#viewSource" title="view source" class="item viewSource" style="width: 16px; height: 16px;">view source</a><a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#printSource" title="print" class="item printSource" style="width: 16px; height: 16px;">print</a><a href="http://hernan.amiune.com/labs/jQuery-Tooltip-Plugin/jQuery-Tooltip-Plugin.html#about" title="?" class="item about" style="width: 16px; height: 16px;">?</a></div></div><div class="lines"><div class="line alt1"><code class="number">01.</code><span class="content"><span class="block" style="margin-left: 0px !important;"><code class="plain">$(</code><code class="string">"#example1"</code><code class="plain">).tooltip({</code></span></span></div><div class="line alt2"><code class="number">02.</code><span class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><span class="block" style="margin-left: 28px !important;"><code class="plain">cssClass: </code><code class="string">""</code><code class="plain">, </code></span></span></div><div class="line alt1"><code class="number">03.</code><span class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><span class="block" style="margin-left: 28px !important;"><code class="plain">delay : 0,</code><code class="comments">// time in milliseconds that you must leave the mouse over the link until the tooltip appears</code></span></span></div><div class="line alt2"><code class="number">04.</code><span class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><span class="block" style="margin-left: 28px !important;"><code class="plain">duration : 500,</code><code class="comments">//time in milliseconds that the tooltip will stay visible after you remove the mouse over the link</code></span></span></div><div class="line alt1"><code class="number">05.</code><span class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><span class="block" style="margin-left: 28px !important;"><code class="plain">xOffset : 15,</code></span></span></div><div class="line alt2"><code class="number">06.</code><span class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><span class="block" style="margin-left: 28px !important;"><code class="plain">yOffset : 15,</code></span></span></div><div class="line alt1"><code class="number">07.</code><span class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><span class="block" style="margin-left: 28px !important;"><code class="plain">opacity : 0, </code></span></span></div><div class="line alt2"><code class="number">08.</code><span class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><span class="block" style="margin-left: 28px !important;"><code class="plain">fadeDuration: 400 </code></span></span></div><div class="line alt1"><code class="number">09.</code><span class="content"><span class="block" style="margin-left: 0px !important;"><code class="plain">});</code></span></span></div></div></div>
+	<p></p>
+
+</div>
+
+
+
+        </div> 
+        <div id="footer"> 
+            <p> 
+                
+"A good improvisation requires a lot of practice"<br>br/&gt;
+
+                All rights reserved. Copyright © Hernan Amiune
+            </p> 
+        </div> 
+    </div> 
+	
+	
+<script type="text/javascript"> 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6087616-4']);
+    _gaq.push(['_trackPageview']);
+ 
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script> 
+	
+ 
+  			<div id="divTooltip" class="tooltip-red" style="display: none; opacity: 1; position: absolute; left: 444px; top: 156px;"><div id="divTooltipT"></div><div id="divTooltipC"><h1>Example 2</h1>
+This content was loaded by ajax
+</div></div></body></html>
