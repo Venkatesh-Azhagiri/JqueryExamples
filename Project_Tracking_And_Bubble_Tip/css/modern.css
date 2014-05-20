@@ -1,0 +1,434 @@
+div.multi-step {
+	border-style:solid;
+	border-width:2px;
+	border-radius:8px;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;			/* without it, the box will be 2 pixels more than 100% wide */
+	display:table;
+	font-size:1em;
+	width:800px;
+	height:96px;
+}
+div.multi-step ol {
+	counter-reset:li;				/* initialize the step number */
+	display:table-row;
+	margin:0;
+	padding:0;
+}
+div.multi-step ol > li {
+	background-position:0 50%;
+	background-repeat:no-repeat;
+	display:table-cell;				/* table cells have equal heights */
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+div.multi-step ol > li:last-child {
+	border-radius:0 8px 8px 0;		/* we need to round those corners, otherwise the background will show over the rounded border */
+}
+div.multi-step ol > li:first-child {
+	border-radius:8px 0 0 8px;
+	background:none;
+}
+div.multi-step ol > li:first-child p {
+	margin-left:-27px;
+}
+div.multi-step ol > li.current p,
+div.multi-step ol > li.current .wrap,
+div.multi-step ol > li.current ~ li .wrap {	
+	opacity:1;
+	filter:alpha(opacity=100);		/* this is for IE 8 */
+}
+div.multi-step ol > li .wrap {
+	min-height: 20px;				/* the number is abolutely positioned, so I need to save some space */
+	padding:8px 2px 8px 42px;
+	position:relative;
+	/*opacity:0.5;*/
+	filter:alpha(opacity=50);
+}
+div.multi-step ol > li .wrap:before {
+	content:counter(li);			/* the step number is generated with CSS and placed in the :before pseudo-element */
+	counter-increment:li;
+	position:absolute;
+	top:-11px;
+	left:15px;
+	border-style:solid;
+	border-width:2px;
+	border-radius:50%;
+	width:15px;
+	height:15px;
+	line-height:14px;
+	font-size:0.7em;
+	font-weight:bold;
+	text-align:center;
+}
+div.multi-step ol > li:first-child .wrap {
+	padding-left:30px;
+}
+div.multi-step ol > li:first-child .wrap:before {
+	left:4px;
+}
+div.multi-step ol > li p {
+	margin:0;
+}
+div.multi-step ol > li .title {
+	font:bold 9px Arial, Helvetica, sans-serif;
+	line-height:1;
+}
+div.multi-step ol > li .subtitle {
+	font:normal 11px Arial, Helvetica, sans-serif;
+	line-height:1.2;
+	left:-10px;
+	margin-top:0.4em;
+}
+
+	
+/* specific widths are needed for each step (LI) since table-cell are only as wide as it's content needs by default
+   you should not really need less than three or more than five steps! */
+div.multi-step.three-steps ol > li {
+	
+}
+div.multi-step.three-steps ol > li:first-child {
+
+}
+
+div.multi-step.four-steps ol > li {
+
+}
+div.multi-step.four-steps ol > li:first-child {
+
+}
+
+div.multi-step.five-steps ol > li {
+
+}
+
+
+/* IE 8 fixes */
+@media \0screen {
+	div.multi-step ol > li .wrap:before {
+		border-width:0;
+		top:6px;
+		left:22px;
+	}
+	div.multi-step ol > li:first-child .wrap:before {
+		left:6px;
+	}
+}
+
+.progressbar_1 {
+  position:absolute;
+  top:37px;
+  left:16px;
+  height: 18px;
+  background: #dfdfdf;  
+  border:1px solid #afafa6;
+  width:224px;   
+ /* 
+  border:0px solid #999;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-radius: 10px;*/
+}
+.progressbar_1 > span {
+  position: relative;
+  float: left;
+  margin: 0 -1px;
+  min-width:0px;
+  height: 18px;
+  line-height: 16px;
+  text-align: center;
+  background: #C7C7C7;
+ /*
+  border:0px solid;
+  border-color: #bfbfbf #b3b3b3 #9e9e9e;
+  border-radius: 0px;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -o-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dbdbdb 70%, #cccccc);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  */
+}
+.progressbar_1 > span > span {
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  /*color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);*/
+}
+.progressbar_1 > span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 18px;
+  background: url("../img/progress.png") 0 0 repeat-x;
+  border-radius: 0px;
+}
+.progressbar_2 {
+  position:absolute;
+  top:37px;
+  left:17px;
+  height: 18px;
+  background: #dfdfdf;  
+  border:1px solid #afafa6;
+  width:163px;   
+ /* 
+  border:0px solid #999;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-radius: 10px;*/
+}
+.progressbar_2 > span {
+  position: relative;
+  float: left;
+  margin: 0 -1px;
+  min-width:0px;
+  height: 18px;
+  line-height: 16px;
+  text-align: center;
+  background: #cccccc;
+ /*
+  border:0px solid;
+  border-color: #bfbfbf #b3b3b3 #9e9e9e;
+  border-radius: 0px;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -o-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dbdbdb 70%, #cccccc);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  */
+}
+.progressbar_2 > span > span {
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  /*color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);*/
+}
+.progressbar_2 > span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 18px;
+  background: url("../img/progress.png") 0 0 repeat-x;
+  border-radius: 0px;
+}
+.progressbar_3 {
+  position:absolute;
+  top:37px;
+  left:17px;
+  height: 18px;
+  background: #dfdfdf;  
+  border:1px solid #afafa6;
+  width:95px;   
+ /* 
+  border:0px solid #999;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-radius: 10px;*/
+}
+.progressbar_3 > span {
+  position: relative;
+  float: left;
+  margin: 0 -1px;
+  min-width:0px;
+  height: 18px;
+  line-height: 16px;
+  text-align: center;
+  background: #cccccc;
+ /*
+  border:0px solid;
+  border-color: #bfbfbf #b3b3b3 #9e9e9e;
+  border-radius: 0px;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -o-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dbdbdb 70%, #cccccc);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  */
+}
+.progressbar_3 > span > span {
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  /*color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);*/
+}
+.progressbar_3 > span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 18px;
+  background: url("../img/progress.png") 0 0 repeat-x;
+  border-radius: 0px;
+}
+.progressbar_4 {
+  position:absolute;
+  top:37px;
+  left:17px;
+  height: 18px;
+  background: #dfdfdf;  
+  border:1px solid #afafa6;
+  width:84px;  
+  z-index:2;
+ /* 
+  border:0px solid #999;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-radius: 10px;*/
+}
+.progressbar_4 > span {
+  position: relative;
+  float: left;
+  margin: 0 -1px;
+  min-width:0px;
+  height: 18px;
+  line-height: 16px;
+  text-align: center;
+  background: #cccccc;
+ /*
+  border:0px solid;
+  border-color: #bfbfbf #b3b3b3 #9e9e9e;
+  border-radius: 0px;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -o-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dbdbdb 70%, #cccccc);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  */
+}
+.progressbar_4 > span > span {
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  /*color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);*/
+}
+.progressbar_4 > span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 18px;
+  background: url("../img/progress.png") 0 0 repeat-x;
+  border-radius: 0px;
+}
+.progressbar_5 {
+  position:fixed;
+  top:209px;
+  left:800px;
+  height: 18px;
+  background: #dfdfdf;  
+  border:1px solid #afafa6;
+  width:97px;    
+ /* 
+  border:0px solid #999;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-radius: 10px;*/
+}
+.progressbar_5 > span {
+  position: relative;
+  float: left;
+  margin: 0 -1px;
+  min-width:0px;
+  height: 18px;
+  line-height: 16px;
+  text-align: center;
+  background: #cccccc;
+ /*
+  border:0px solid;
+  border-color: #bfbfbf #b3b3b3 #9e9e9e;
+  border-radius: 0px;
+  background-image: -webkit-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -moz-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: -o-linear-gradient(top, #f0f0f0, #dbdbdb 70%, #cccccc);
+  background-image: linear-gradient(to bottom, #f0f0f0, #dbdbdb 70%, #cccccc);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  */
+}
+.progressbar_5 > span > span {
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  /*color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);*/
+}
+.progressbar_5 > span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 18px;
+  background: url("../img/progress.png") 0 0 repeat-x;
+  border-radius: 0px;
+}
+.progressbar_1 .green {
+  background: #85c440;
+  border-color: #78b337 #6ba031 #568128;
+  background-image: -webkit-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -moz-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -o-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: linear-gradient(to bottom, #b7dc8e, #99ce5f 70%, #85c440);
+}
+.progressbar_2 .green {
+  background: #85c440;
+  border-color: #78b337 #6ba031 #568128;
+  background-image: -webkit-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -moz-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -o-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: linear-gradient(to bottom, #b7dc8e, #99ce5f 70%, #85c440);
+}
+.progressbar_3 .green {
+  background: #85c440;
+  border-color: #78b337 #6ba031 #568128;
+  background-image: -webkit-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -moz-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -o-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: linear-gradient(to bottom, #b7dc8e, #99ce5f 70%, #85c440);
+}
+.progressbar_4 .green {
+  background: #85c440;
+  border-color: #78b337 #6ba031 #568128;
+  background-image: -webkit-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -moz-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -o-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: linear-gradient(to bottom, #b7dc8e, #99ce5f 70%, #85c440);
+}
+.progressbar_5 .green {
+  background: #85c440;
+  border-color: #78b337 #6ba031 #568128;
+  background-image: -webkit-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -moz-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: -o-linear-gradient(top, #b7dc8e, #99ce5f 70%, #85c440);
+  background-image: linear-gradient(to bottom, #b7dc8e, #99ce5f 70%, #85c440);
+}
