@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dynamic Javascript Table</title>
+<style>
+table, th, td {
+	border: 1px solid black;
+}
+</style>
+<script type="text/javascript">
+
+function loadTable(){
+	var table = document.getElementById("sampleTable");
+	var rowCount = 2;	
+	
+	for(i=1; i<=rowCount; ++i) {
+	    var row = table.insertRow(1);    
+	
+	    var cell1 = row.insertCell(0);  
+	  
+	    if(i==1){
+	    	cell1.innerHTML = "Venkatesh";
+	    }else{
+	    	cell1.innerHTML = "Sathish";	
+	    }
+	
+	    var cell2 = row.insertCell(1);
+	    if(i==1){
+	    	cell2.innerHTML = "31";
+	    }else{
+	    	cell2.innerHTML = "32";
+	    }
+	
+	    var cell3 = row.insertCell(2);
+	    if(i==1){
+	    	cell3.innerHTML = "Male";
+	    }else{
+	    	cell3.innerHTML = "Male";
+	    }
+	    
+	    var cell4 = row.insertCell(3);
+	    if(i==1){
+	    	cell4.innerHTML = "Hyderabad";
+	    }else{
+	    	cell4.innerHTML = "Chennai";
+	    	
+	    }
+	}  
+}
+</script>
+</head>
+<body onload="loadTable()">
+	<table id="sampleTable">
+		<tbody>
+			<tr>
+				<th>Person Name</th>
+				<th>Age</th>
+				<th>Gender</th>
+				<th>Address</th>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
